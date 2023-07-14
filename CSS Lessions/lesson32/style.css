@@ -1,0 +1,129 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightslategray;
+}
+
+h1.title {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 
+css动画的两种做法: transition和animation
+1. transition需要去触发: 如点击事件、鼠标移入事件；
+而animation可以配合@keyframe可以不触发事件就触发这个动画
+2. transition触发一次播放一次，animation可以设置很多属性，
+如循环次数、动画结束的状态等等.
+3. transition关注的是样式属性的变化，属性值和时间的关系是
+一个三次贝塞尔曲线；而animation作用于元素本身而不是样式属性
+，可以使用关键帧的概念，可以实现更自由的动画效果；
+
+animation property: 
+The animation shorthand CSS property applies an animation 
+between styles. It is a shorthand for animation-name, 
+animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, 
+and animation-play-state.
+
+animation的各种属性如下: 
+animation-iteration-count: 
+initial value为1，可以取值infinite(repeat forever) or <number>
+
+animation-timing-function: 
+initial value为ease
+
+animation-delay: 
+initial value为0s
+
+animation-iteration-count: 
+initial value为1
+
+animation-direction: 
+normal、reverse、alternate、alternate-reverse
+initial value为normal 
+
+animation-fill-mode:  
+sets how a CSS animation applies styles to its target before 
+and after its execution.
+initial value为none
+
+animation-play-state: 
+whether an animation is running or paused.
+values: running or paused
+
+持续时间 | 动画效果 | 延迟 | 重复次数 | 方向 | 过渡方式 | 是否暂停 | 动画名
+animation: 3s ease-in 1s 2 reverse both paused xxx;
+
+持续时间 | 动画效果 | 延迟 | 动画名
+animation: 3s linear 1s xxx;
+
+持续时间 | 动画名
+animation: 3s xxx;
+
+@keyframes at-rule: 
+The @keyframes CSS at-rule controls the intermediate 
+steps in a CSS animation sequence by defining styles 
+for keyframes (or waypoints) along the animation sequence. 
+This gives more control over the intermediate steps of the 
+animation sequence than transitions.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+
+eg: 
+@keyframes square {
+    a starting offset of 0%
+    from {
+        background-color: skyblue;
+    }
+    an ending offset of 100% 
+    to {
+        background-color: blue;
+    }
+}
+*/
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    position: relative;
+    /* animation-name: square;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: paused; */
+    animation: square 4s linear 1s infinite alternate;
+}
+
+@keyframes square {
+    0% {
+        background-color: red;
+        left: 0px;
+        right: 0px;
+    }
+    25% {
+        background-color: gold;
+        left: 500px;
+        top: 0px;
+    }
+    50% {
+        background-color: lime;
+        left: 500px;
+        top: 500px; 
+        border-radius: 50%;
+    }
+    75% {
+        background-color: dodgerblue;
+        left: 0px; 
+        top: 500px;
+    }
+    100% {
+        background-color: purple;
+        left: 0px; 
+        top: 0px; 
+        border-radius: 0px;
+    }
+}
+

@@ -1,0 +1,98 @@
+* {
+    font-family: myfont, Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+
+html, body {
+    /* margin: 0;
+    padding: 0; */
+    height: 100%;
+}
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+    text-shadow: 1px 2px 3px lightslategray;
+    background-color: lightsteelblue;
+}
+
+h1.title > span {
+    font-size: large;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+/* CONTAINER */
+#container {
+    width: 1000px;
+    height: 400px;
+    background-color: #4524FB;
+    margin: 80px auto;
+    border-radius: 8px;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* align-content: center; */
+}
+
+div#container > div {
+    width: 150px;
+    height: 80px;
+    background-color: lime;
+    border-radius: 10px;
+    text-align: center;
+    /* line-height和height相等时文本居中 */
+    line-height: 80px;
+    font-weight: bolder;
+}
+
+.item1 {
+    align-self: flex-start;
+}
+
+#wrapper {
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+.placeholder, footer {
+    height: 60px;
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    background-color: lightslategray;
+    text-align: center;
+    line-height: 60px;
+}
+
+/* 
+通常情况下，文档流中的元素会根据其内容自动撑开父容器的高度。但是，当我们将 margin-bottom 设置为负值时，这个元素实际上超出了其正常的布局边界，并且不再影响父容器的高度计算
+
+它还有个广为人知的名字： BFC （块级格式化上下文）
+
+BFC 是 CSS 中的一种渲染机制，它会影响元素在布局中的表现和相邻元素之间的交互。当一个元素触发 BFC 时，它会创建一个 独立 的渲染环境，并遵循一些特定规则进行布局，最常见的例子就是 绝对定位
+
+如果只是简单地将 footer 的 margin-bottom 设置为负数，在没有其他调整的情况下，它可能会 重叠或覆盖 页面上其他内容。
+
+因此需要一个 同高 的占位 div 来代替被 footer 所占用的空间
+*/
+
+span#copyright {
+    color: lightblue;
+    text-shadow: 1px 2px 2px lightblue;
+    text-transform: uppercase;
+}
+
+

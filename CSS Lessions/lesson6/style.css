@@ -1,0 +1,39 @@
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+input[type] {
+    border: 2px solid orangered;
+}
+
+input[type="text"] {
+    background-color: palegoldenrod;
+}
+
+input[type="email"] {
+    background-color: aqua;
+}
+
+input[type="button"] {
+    border: 2p solid green;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* attribute starts with */
+p[title^="I"] {
+    color: dodgerblue;
+}
+
+/* attribute ends with */
+p[title$="fox"] {
+    color: red;
+}
+
+/* attribute contains with */
+p[title~="Dreamer"] {
+    text-decoration: underline;
+}

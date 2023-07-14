@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#grid {
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px;
+}
+
+#item1 {
+    background-color: lime;
+    /* grid-column: 1; */
+}
+
+#item2 {
+    background: yellow;
+    /* 横跨2、3 */
+    grid-column: 2 / 4;
+}
+
+#item3 {
+    background-color: blue;
+    /* 横跨2格，到7结束 */
+    grid-column: span 2 / 7;
+}

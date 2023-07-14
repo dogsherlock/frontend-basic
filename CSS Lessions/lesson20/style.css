@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2.title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+/* 
+css nummerical units
+abosolute units:
+px - pixels 
+cm - centimeters
+mm - millimeters
+in - inches
+pt - points
+pc - picas
+
+
+relative units:
+em - rel to container 相对于目标元素的直接父元素
+ch - rel to the width of 数字0的宽度
+rem - rel to font-size of root element 相对于文档的根元素(html)
+vw - rel to %1 of viewport width
+vh - rel to %1 of viewport height
+% - rel to parent element
+*/
+div {
+    height: 10px;
+}
+
+#absolute {
+    width: 50px;
+    background-color: rebeccapurple;
+}
+
+#outerDiv {
+    width: 100px;
+    border: 3px solid gray;
+    padding: 1px;
+}
+
+#relative {
+    width: 50%;
+    background-color: limegreen;
+}
+
+p {
+    font-size: 1.5em;
+}

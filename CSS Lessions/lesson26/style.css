@@ -1,0 +1,88 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+/* 
+background-image:
+The background-image CSS property sets one or 
+more background images on an element.
+元素的背景占据了元素的全部尺寸，包括内边距和边框，
+不包括外边距.根绝backgroud-repeat属性的值，图片可以
+无限平铺(沿着x轴或y轴线)
+
+background-repeat:
+此属性设置是否及如何重复背景图像.
+默认地，背景图像在水平和垂直方向上重复.
+值有repeat、repeat-x、repeat-y、no-repeat、
+inherit(规定应该从父元素继承background-repeat属性的设置)
+
+
+background-size:
+此属性规定背景图像的尺寸.
+值有如下:
+length: 
+设置背景图像的高度和宽度
+第一个值设置宽度，第二个值设置高度
+如果只设置一个值，则第二个值会被设置为 "auto"
+percentage: 
+以父元素的百分比来设置背景图像的宽度和高度
+第一个值设置宽度，第二个值设置高度
+如果只设置一个值，则第二个值会被设置为 "auto"
+cover: 
+把背景图像扩展至足够大，以使背景图像完全覆盖背景区域
+背景图像的某些部分也许无法显示在背景定位区域中
+contain: 
+把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域
+
+background-attachment:
+设置背景图像是否固定或者随着页面的其余部分滚动
+
+值:
+scroll: 
+默认值, 背景图像会随着页面其余部分的滚动而移动.
+fixed: 
+当页面的其余部分滚动时，背景图像不会移动.
+inherit: 
+规定应该从父元素继承 background-attachment 属性的设置.
+
+background-clip: 
+此属性规定背景的绘制区域.
+值如下: 
+border-box:
+默认值, 背景被裁剪到边框盒
+padding-box: 
+背景被裁剪到内边距框
+content-box: 
+背景被裁剪到内容框
+text: 
+背景被裁剪到前景文本
+*/
+div {
+    width: 600px;
+    height: 600px;
+    border: 5px solid grey;
+    margin: 50px auto;
+    /* background-color: lightblue;
+    background-image: url(images/sonic.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; */
+    /* 
+    background-position: bottom right;
+     */
+
+     /* background property for shorthand */
+    background: url(images/sonic.png) no-repeat
+    center/contain lightblue;
+
+}
+
+body {
+    background-image: url(images/processing.png);background-repeat: no-repeat;
+    background-size: 200px;
+    background-attachment: fixed;
+}

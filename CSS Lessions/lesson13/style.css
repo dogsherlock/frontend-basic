@@ -1,0 +1,13 @@
+/* reset styles reset styles basically reset any of the default browser styles. */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: gray;
+    list-style-type: none;
+    padding: 0px;
+    cursor: default;
+}
+
+.title {
+    text-align: center;
+}

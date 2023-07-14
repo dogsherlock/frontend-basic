@@ -1,0 +1,13 @@
+h2 {
+    color: gray;
+    font-size: 30px;
+    border: 1px solid lightblue;
+    background-color: skyblue;
+}
+
+p {
+    font-size: 50px;
+    color: gray;
+    text-shadow: 3px 3px 5px skyblue;
+    text-decoration: dotted underline overline purple 2px;
+}

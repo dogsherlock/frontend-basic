@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements */
+
+/* 
+伪类是选择器的一种，用于选择处于特定状态的元素.
+:pseudo-class-name 
+
+伪元素表现得是像你往标记文本中加入全新的 HTML 元素一样，
+而不是向现有的元素上应用类。伪元素开头为双冒号::
+一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到.
+现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素
+*/
+
+/* 
+a标签的四个伪类
+a:link 访问前状态
+a:visited 访问后状态
+a:hover 鼠标悬浮状态
+a:active 鼠标点击状态
+*/
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}
+
+a:active {
+    color: lawngreen;
+}
+
+a:visited {
+    color: red;
+}

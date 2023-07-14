@@ -1,0 +1,56 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+css varaibles: 
+css varaibles are case sensitive
+
+css变量基本使用方法:
+自定义属性以--开始，属性值可以是任何有效的css值.
+
+:root {
+    --main-bg-color: brown;
+}
+:root是css伪类，表示文档的根元素，也就是html元素.
+
+element {
+  --main-bg-color: brown;
+  --new-color: red;
+  --new-border: 2px solid var(--new-color);
+}
+element指定自定义属性使用的范围,一般指定为:root,
+可以应用在html文档全局中.
+
+可以使用如: background-color: var(--main-bg-color);
+var() css function用来插入自定义属性(css variable)的值
+
+
+custom property fallback values:
+Using the var() function, you can define multiple fallback 
+values when the given variable is not yet defined
+
+如果--my-var、--my-background无效，则使用pink.
+如: background-color: var(--my-var, var(--my-background, pink));
+
+也可以在html中使用自定义变量,如<h2 style="border: var(--new-border)"><h2>
+
+inheritance of custom properties: 
+Custom properties do inherit. This means that if no value 
+is set for a custom property on a given element, 
+the value of its parent is used.
+
+values in javascript: 
+To use the values of custom properties in JavaScript, 
+it is just like standard properties.
+
+// get variable from inline style
+element.style.getPropertyValue("--my-var");
+
+// get variable from wherever
+getComputedStyle(element).getPropertyValue("--my-var");
+
+// set variable on inline style
+element.style.setProperty("--my-var", jsVar + 4);
+*/

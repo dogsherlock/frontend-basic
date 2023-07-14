@@ -1,0 +1,115 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+/*  
+media queries: 
+Media queries allow you to apply CSS styles depending on a device's 
+general type (such as print vs. screen) or other characteristics 
+such as screen resolution or browser viewport width. 
+Media queries are used for the following:
+
+1. To conditionally apply styles with the CSS @media and @import at-rules.
+2. To target specific media for the <style>, <link>, <source>, and other
+HTML elements with the media= attribute.
+3. To test and monitor media states using the Window.matchMedia() 
+and EventTarget.addEventListener() methods.
+
+orientation属性(判断是否为横竖屏): 
+orientation: portrait(竖屏，即设备中的页面可见区域高度>宽度)
+orientation: landscape(横屏，即设备中的页面可见区域高度<宽度)
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #ffffff;
+    background-color: lightslategray;
+}
+
+img {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* media queries */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width: 300px) {
+    h1 {
+        text-align: center;
+        font-size: 25px;
+        text-decoration: underline;
+    }
+    p {
+        font-size: 14px;
+        padding: 0px 20px; 
+        line-height: 22px;
+    }
+    img {
+        width: 300px;  
+    }
+}
+
+@media screen and (min-width: 500px) {
+    h1 {
+        color: lime;
+    }
+    p {
+        font-size: 15px;
+        padding: 0px 40px; 
+        line-height: 25px;
+    }
+    img {
+        border: 2px solid lightpink; 
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        color: orangered;
+    }
+    p {
+        font-size: 16px;
+        padding: 0px 40px; 
+        line-height: 28px;
+    }
+    img {
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    h1 {
+        color: chartreuse;
+    }
+    p {
+        font-size: 18px;
+        padding: 0px 120px; 
+        line-height: 28px;
+    }
+    img {
+        background-color: lightblue;
+        border: 5px dashed lightgreen
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        background-image: linear-gradient(to bottom, #2ee1ba, #00cce4, #00afff, #0086ff, #a347cb);
+    }
+}

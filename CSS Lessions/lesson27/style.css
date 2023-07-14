@@ -1,0 +1,58 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+
+/* 
+从元素本身的特点来讲，可以分为不可替换元素和替换元素.
+不可替换元素: 
+HTML 的大多数元素是不可替换元素，即其内容直接表现给用户端（例如浏览器）
+替换元素:
+替换元素就是浏览器根据元素的标签和属性，来决定元素的具体显示内容
+
+HTML中的<img>、<input>、<textarea>、<select>、<object>都是替换元素
+这些元素往往没有实际的内容，即是一个空元素
+
+img、input属于行内替换元素：height/width/padding/margin均可用，效果等于块元素
+行内非替换元素：height/width/padding top、bottom/margin top、
+bottom均无效果(padding-top和padding-bottom).只能用padding left、right和margin left、right
+改变宽度.例如：span、strong、a、b、em
+
+display:
+值如下: 
+none 
+inline 
+block 
+inline-block
+flex 
+grid
+
+visibility property: 值为hidden可以将元素移除，但是占用空间
+display属性值为none: 将元素移除页面，同时移除占用的空间(文档渲染时当做元素不存在)
+*/
+p, h2, h3, h4 {
+    border: 2px solid lightgrey;
+}
+
+span, a, img {
+    border: 2px solid lightcoral;
+    /* 如果想要给行内会替换元素设置宽高，可以将display设置为inline-block */
+    display: inline-block;
+    width: 200px;
+}
+
+#sentence {
+    background-color: lightblue;
+    color: #ffffff;
+}
+
+/* #sentence span {
+    border: none;
+    color: #000000;
+    background-color: yellowgreen;
+    font-size: 50px;
+} */

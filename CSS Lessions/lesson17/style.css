@@ -1,0 +1,31 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* css margin and padding explained */
+img {
+    width: 200px;
+    /* margin-left: 30px;
+    margin-bottom: 10px; */
+    display: block;
+    /* auto只对块元素生效,img是行内可替换元素 */
+    margin: 20px auto;
+}
+
+#woody {
+    background-color: orange;
+}
+
+#buzz {
+    background-color: #9dcb6f;
+}
+
+h2 {
+    /* padding-left: 30px; */
+    margin-bottom: 50px;
+    text-align: center;
+}
