@@ -1,0 +1,46 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* ul li a {
+    color: purple;
+}
+
+li a {
+    color: forestgreen;
+}
+
+a {
+    color: red;
+} */
+
+/* ID > CLASS > ELEMENT */
+#a {
+    color: orangered;
+}
+
+.ul li a {
+    color: dodgerblue;
+}
+
+ul li a {
+    color: aquamarine;
+}
+
+#body {
+    background-color: rgb(163, 177, 208);
+}
+
+.body {
+    background-color: blue;
+}
+
+/* 应该避免使用important(最高优先级) */
+body {
+    background-color: lightblue !important;
+}

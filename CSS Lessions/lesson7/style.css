@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* select multiple elements by separating them with comma. */
+/* p, button {
+    color: red;
+} */
+
+/* selects all inside of descendant */
+#outerDiv p {
+    color: blue;
+}
+
+/* selects all inside parent (direct descendant) */
+#innerDiv > p {
+    color: green;
+}
+
+/* h2 + p 会匹配紧邻在 h2 元素后的第一个 <p> 元素 */
+h3 + p {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* p ~ span 匹配同一父元素下，<p> 元素后的所有 <span> 元素 */
+p ~ h4 {
+    color: orangered
+}

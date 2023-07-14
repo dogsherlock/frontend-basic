@@ -1,0 +1,123 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+/* 
+position property
+The position css property sets how an element is positioned
+in a document. the top, right, bottom, and left properties
+dertermine the final location of postioned elements.
+
+static 默认静态 正常文档流
+relative 相对 不脱离文档流 只改变自身位置
+absolute 绝对 相对于最近的父元素 脱离文档流
+fixed 固定 相对于浏览器窗口 脱离文档流
+sticky 粘性定位 不脱离文档流 sticky跟前面四个属性值都不一样，
+它会产生动态效果，很像relative和fixed的结合：
+一些时候是relative定位（定位基点是自身默认位置），
+另一些时候自动变成fixed定位（定位基点是视口）.
+sticky能够形成动态固定的效果，初始加载时在自己的默
+认位置(relative定位) 滚动条下滑变成固定定位
+页面滚回去又会变成相对定位
+top值必须有，当滚动到top值的时候，元素会固定.
+
+z-index: 1 
+z-index 属性设置元素的堆叠顺序.拥有更高堆叠顺序
+的元素总是会处于堆叠顺序较低的元素的前面。
+*/
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid grey;
+}
+
+/*
+position: static;
+
+The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.
+
+position默认值是static
+ */
+#static {
+    background-color: lightblue;
+}
+
+
+/* 
+position: relative;
+
+The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.
+ */
+#relative {
+    background-color: lightgreen;
+    position: relative;
+    left: 200px
+}
+
+/* 
+position: absolute;
+
+The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.
+
+当页面超过一页，footer始终位于整个内容的底部
+<html>
+  <body id="mybody">
+    <div class="mainContent"></div>
+    <footer id="myfooter"></footer>
+  </body>
+</html>
+
+#mybody {
+        position: relative;
+}
+
+#myfooter {
+    position: absolute;
+    bottom: 0px;
+}
+*/
+#absolute {
+    background-color: lightgrey;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+/* 
+position: fixed;
+*/
+#fixed {
+    background-color: lightcoral;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+/* 
+position: sticky;
+*/
+#sticky {
+    background-color: lightskyblue;
+    position: sticky;
+    top: 20px;
+}
+
+
+.container {
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+/* fixed1 absolute值相对于最近的有定位的父容器div.container */
+#fixed1 {
+    background-color: lightslategray;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

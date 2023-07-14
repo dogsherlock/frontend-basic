@@ -1,0 +1,72 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+/* 
+css specifies multiple ways in which we can add
+color to our elements:
+
+Color name: red、blue
+HEX value: #cced50;
+RGB value: 255, 255, 255
+RGBA value: 255, 255, 255, 1
+
+HSL(hue色相，saturation饱和度，lightness亮度)
+HSL value: 0, 100%, 50
+HSLA value: 0, 100%, 64%, 0
+*/
+
+.frame {
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px lightgrey;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: seashell;
+}
+
+.frame:hover {
+    box-shadow: 8px 8px 10px lightgrey;
+    cursor: pointer;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border: 3px solid lightgrey;
+    border-radius: 50%;
+}
+
+body {
+    background-color: #D1CED6;
+}
+
+#colorName {
+    background-color: lightblue;
+}
+
+#hex {
+    background-color: #000000;
+}
+
+#rgb {
+    background-color: rgb(37, 21, 224);
+}
+
+#rgba {
+    background-color: rgba(37, 21, 224, 0.1);
+}
+
+#hsl {
+    background-color: hsl(23, 30%, 58%);
+}
+
+#hsla {
+    background-color: hsla(23, 30%, 58%, 20%);
+}

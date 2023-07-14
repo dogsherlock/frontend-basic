@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css lessons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="title">CSS Numerical Units</h2>
+
+    <h3>Absolute (fixed) units</h3>
+    <div id="absolute"></div>
+    <ul>
+        <li>cm - centimerters</li>
+        <li>mm - millimeters</li>
+        <li>in - inches</li>
+        <li>px - pixels</li>
+        <li>pt - points</li>
+        <li>pc - picas</li>
+    </ul>
+
+    <h3>Relateive (fluid) units</h3>
+    <div id="outerDiv"><div id="relative"></div></div>
+    <ul>
+        <!-- 
+            em单位为相对长度单位，用来设置文本的字体尺寸的，
+            相对于父级元素对象内文本的字体尺寸，浏览器默认的
+            字体尺寸为16px 
+        -->
+        <li>em - rel to container</li>
+        <li>ex - rel to x height of current font</li>
+        <li>ch - rel to the width of 0</li>
+        <li>rem - rel to font-size of root element</li>
+        <li>vw - rel to %1 of viewport width</li>
+        <li>vh - rel to %1 of viewport height</li>
+        <li>vmin - rel to %1 of viewport smaller dimension</li>
+        <li>vmax - rel to %1 of viewport larger dimension</li>
+        <li>% - rel to parent element</li>
+    </ul>
+
+    <p>hello, I am clarence.</p>
+</body>
+</html>

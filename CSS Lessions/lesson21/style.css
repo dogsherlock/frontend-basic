@@ -1,0 +1,60 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2.title {
+    text-align: center;
+}
+
+/* 
+text-align: justify;
+可以让文本两端对齐
+文本的最后一行或者单独一行设置是无效的
+对元素没有效果只对元素内文本有效果*/
+#sentence {
+    /* text align  */
+    text-align: left;
+
+    /* text decoration 
+    underline overline line-through
+    */
+    /* text-decoration-line: line-through;
+    text-decoration-style: wavy;
+    text-decoration-color: limegreen; */
+    text-decoration: line-through wavy limegreen;
+    /* 文本第一行开头缩进 */
+    text-indent: 20px;
+
+    /* text-transform */
+    text-transform: capitalize;
+    text-transform: lowercase;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+#paragraph {
+    /* text overflow */
+    /* overflow属性可以控制内容溢出元素框时在对应的元素
+    区间内添加滚动条. */
+    overflow: scroll;
+    white-space: nowrap;
+    border: 2px solid limegreen;
+    background-color: lightblue;
+    /* text-overflow属性用于确定如何提示用户存在隐藏的溢出内容.其形式可以是裁剪，也可以是显示一个省略号ellip */
+    text-overflow: clip;
+}
+
+h1 {
+    /* 
+    text shadow为文字添加阴影.
+    阴影值由元素在x和y方向上的偏移量、模糊半径和颜色值组成.
+    */
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px grey;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}

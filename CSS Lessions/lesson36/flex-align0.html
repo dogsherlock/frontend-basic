@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox align 0 — starting code</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 70%;
+            /* 给元素设置设置最大宽度值. */
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        button {
+            font-size: 18px;
+            /* line-height无单位数字乘以该元素的字体大小 */
+            line-height: 1.5;
+            width: 15%;
+        }
+
+        div {
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        /* Add your flexbox CSS below here */
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* source code Smile order is 1 */
+        button:first-child {
+            order: 1;
+        }
+
+        /* source code Blush order is -1 */
+        button:last-child {
+            order: -1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+    </div>
+</body>
+
+</html>

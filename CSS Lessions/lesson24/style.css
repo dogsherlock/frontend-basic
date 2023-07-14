@@ -1,0 +1,24 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+#red {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    border: 10px solid black;
+    margin: 5px;
+    padding: 20px;
+    /* 盒子的宽度和长度属性包含content、padding和border. */
+    box-sizing: border-box;
+}
+
+#blue {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+}

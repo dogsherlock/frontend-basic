@@ -1,0 +1,20 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    color: orangered;
+    font-weight: lighter;
+}
+
+#id {
+    color: forestgreen;
+    font-family: monospace;
+}
+
+.class {
+    color: dodgerblue;
+    font-weight: 100;
+    font-size: 20px;
+}

@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+/* 
+transition property: 
+The transition CSS property is a shorthand property 
+for transition-property, transition-duration, 
+transition-timing-function, and transition-delay.
+The transition property is specified as one or more 
+single-property transitions, separated by commas.
+*/
+
+div {
+    width: 100px;
+    height: 100px; 
+    margin: 200px auto; 
+    background-color: lightblue;
+    /* 在这里将transition放在变化前的状态，
+    鼠标hover之后回到初始的状态也会有动画，而不是立刻回到现在的状态
+    */
+    /* transition: all 2s; */
+    /* transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s; */
+    transition: all 1.5s 0.3s ease;
+}
+
+div:hover {
+    width: 150px;
+    height: 150px;
+    background-color: lightpink;
+    color: #ffffff;
+    transform: rotate(360deg);
+}

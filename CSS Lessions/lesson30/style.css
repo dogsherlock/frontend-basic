@@ -1,0 +1,53 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.title {
+    text-align: center;
+}
+
+/* 
+transform property: 
+The transform CSS property lets you rotate, scale, skew, 
+or translate an element. It modifies the coordinate space 
+of the CSS visual formatting model.
+
+tranform: <tranform-function>或none
+
+<tranform-function>: 
+rotate(): rotates an element around a fixed point on 
+the 2d plane.
+
+rotate3d(x, y, z): 正的角度值表示沿着此方向轴顺时针旋转，负
+值表示逆时针旋转.
+
+scale(): scales an element up or down on the 2d plane.
+
+translate() 和 position: relative区别: 
+布局方面: 效果是一样的，但是transform可以作用于position: absolute
+动画方面: transform可以让GPU参与运算，实现动画效果
+position的动画变化的单位是1px，transform参与可以让
+动画效果更加平滑
+
+matrix(): 
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+*/
+div {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    color: #ffffff;
+    transform: rotate(0deg);
+    /* transform: rotate(45deg) scale(2); */
+    /* transform: skewX(20deg); */
+    /* transform: translate(-100px, 100px); */
+}
+
+div:hover {
+    cursor: pointer;
+    transition: all 2s linear;
+    transform: rotate3d(1, 1, 1, 360deg);
+    /* transform: rotateX(360deg); */
+    /* transform: rotateY(360deg); */
+}

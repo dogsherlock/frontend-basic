@@ -1,0 +1,63 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2.title {
+    text-align: center;
+    color: lime;
+    /* 阴影是上部分和右边部分. */
+    /* text-shadow: 0px -1px black, 1px 0px black; */
+
+    /* 实现轮廓，上下左右阴影 */
+    text-shadow: 0px -1px black, 1px 0px black, 0px 1px black, -1px 0px black;
+}
+
+
+/* 
+text-shadow & box-shadow property
+
+text-shadow: 
+The text-shadow CSS property adds shadows to text. 
+It accepts a comma-separated list of shadows to be applied
+to the text and any of its decorations. Each shadow is 
+described by some combination of X and Y offsets from 
+the element, blur radius, and color.
+
+box-shadow: 
+The box-shadow CSS property adds shadow effects around
+an element's frame. You can set multiple effects 
+separated by commas. A box shadow is described by 
+X and Y offsets relative to the element, blur and 
+spread radius, and color.
+*/
+
+#text-shadow {
+    font-size: 70px;
+    /* 规定元素中文本的对齐方式 */
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 5px 2px 5px grey;
+}
+
+#box-shadow {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+button {
+    font-size: 20px;
+    margin: 50px auto;
+    padding: 5px 15px;
+    display: block;
+    border-radius: 4px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px grey;
+}

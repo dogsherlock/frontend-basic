@@ -1,0 +1,54 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+css3中新增了一些属性，在以往的版本中是不存在的.针对不同的浏览器，
+规定其内核名称让它们可以对这些新增属性进行解析.
+
+在标准还未确定时，部分浏览器已经根据最初草案实现了部分功能，
+为了与之后确定下来的标准进行兼容，所以每种浏览器使用了自己的
+私有前缀与标准进行区分，当标准确立后，各大浏览器将逐步支持不带前缀的css3新属性
+如: 
+-moz代表firefox浏览器私有属性
+
+-ms代表ie浏览器私有属性
+
+-webkit代表safari、chrome私有属性
+*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 8em;
+    text-align: center;
+    background-image: url("https://cdn.wallpapersafari.com/52/11/uKtf9B.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* transparent关键字表示一个完全透明的颜色，是带有阿尔法通道最小值的黑色，为rgba(0, 0, 0, 0) */
+    color: transparent;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 8em;
+    text-align: center;
+    background-image: url("https://media.giphy.com/media/l0CLUrZiblFUBMMrC/giphy.gif");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+p {
+    font-size: 3.9em;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right, pink, yellow);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
