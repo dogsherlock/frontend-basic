@@ -89,6 +89,13 @@ start、end、flex-start(default value)、flex-end、center、left、right、
 normal、space-between、space-around、space-evenly、
 stretch、safe、unsafe.
 
+space-between: 沿着main axis分布，items 
+之间空间相同，开始和结束项没有空间.
+
+space-around: 开始和结束项空间是items之间空间的一半.
+
+space-evenly: items之间、开始和结束项空间相同.
+
 
 align-items:
 usage:
@@ -131,6 +138,8 @@ ___
 flex: [flex-grow] [flex-shrink] [flex-basis];
 default value: flex: 0 1 auto;
 
+flex: auto;表示flex: 1 1 auto;
+
 #### flex
 The flex CSS shorthand property sets how a flex item will 
 grow or shrink to fit the space available in its flex container.
@@ -161,6 +170,9 @@ properties flex-grow and flex-basis, and normally defined using the flex shortha
 * flex-basis(表示在不伸缩的情况下子容器的原始尺寸/宽高百分数, 默认值为auto)
 sets the initial main size of a flex item. 
 It sets the size of the content box unless otherwise set with box-sizing.
+
+auto表示项目原本的大小(容器内项目的宽度是根据内容自适应的.)
+当flex-basis为百分比时，表示相对于其父弹性盒容器主轴尺寸的百分数.
 
 flex-basis is limited by min-width and max-width.(min-width > 
 flex-basis或max-width < flex-basis时,以min-width或max-width为准)
@@ -231,7 +243,6 @@ align-self CSS property overrides a grid or flex item's align-items value.
 In Grid, it aligns the item inside the grid area. 
 In Flexbox, it aligns the item on the cross axis.
 
-The property doesn't apply to block-level boxes, or to table cells. 
 If a flexbox item's cross-axis margin is auto, then align-self is ignored.
 
 values: 
