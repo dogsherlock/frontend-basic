@@ -22,9 +22,30 @@ and EventTarget.addEventListener() methods.
 orientation属性(判断是否为横竖屏): 
 orientation: portrait(竖屏，即设备中的页面可见区域高度>宽度)
 orientation: landscape(横屏，即设备中的页面可见区域高度<宽度)
+
+media type is optional and the all type is implied.
+media type:
+all、print、sceen
+
+logical operators: 
+and、not、only
+如果需要使用not运算符，必须指定媒体类型.
+如果是逗号分隔的列表，只否定施加的指定的查询.
+eg: 
+1. 没有not，表示满足电脑屏幕&&width<=960px&&width<=500px时，实现定义样式.
+
+2. 有not，表示满足电脑屏幕width>960 || width>500px时，实现定义样式.
+
+@media screen and (max-width:960px) and (max-width:500px){
+      
+}
+@media not screen and (max-width:960px) and (max-width:500px){
+      
+}
 */
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -55,13 +76,15 @@ img {
         font-size: 25px;
         text-decoration: underline;
     }
+
     p {
         font-size: 14px;
-        padding: 0px 20px; 
+        padding: 0px 20px;
         line-height: 22px;
     }
+
     img {
-        width: 300px;  
+        width: 300px;
     }
 }
 
@@ -69,13 +92,15 @@ img {
     h1 {
         color: lime;
     }
+
     p {
         font-size: 15px;
-        padding: 0px 40px; 
+        padding: 0px 40px;
         line-height: 25px;
     }
+
     img {
-        border: 2px solid lightpink; 
+        border: 2px solid lightpink;
     }
 }
 
@@ -83,11 +108,13 @@ img {
     h1 {
         color: orangered;
     }
+
     p {
         font-size: 16px;
-        padding: 0px 40px; 
+        padding: 0px 40px;
         line-height: 28px;
     }
+
     img {
         border-radius: 50%;
     }
@@ -97,11 +124,13 @@ img {
     h1 {
         color: chartreuse;
     }
+
     p {
         font-size: 18px;
-        padding: 0px 120px; 
+        padding: 0px 120px;
         line-height: 28px;
     }
+
     img {
         background-color: lightblue;
         border: 5px dashed lightgreen
