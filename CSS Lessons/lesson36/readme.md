@@ -139,6 +139,8 @@ flex: [flex-grow] [flex-shrink] [flex-basis];
 default value: flex: 0 1 auto;
 
 flex: auto;表示flex: 1 1 auto;
+flex: 1;表示flex: 1 1 0;
+flex: 200px;表示flex: 1 1 200px;
 
 #### flex
 The flex CSS shorthand property sets how a flex item will 
@@ -172,6 +174,7 @@ sets the initial main size of a flex item.
 It sets the size of the content box unless otherwise set with box-sizing.
 
 auto表示项目原本的大小(容器内项目的宽度是根据内容自适应的.)
+0表示该flex item会折叠到最小的宽度.
 当flex-basis为百分比时，表示相对于其父弹性盒容器主轴尺寸的百分数.
 
 flex-basis is limited by min-width and max-width.(min-width > 
