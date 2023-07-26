@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 21px;
+            width: fit-content;
+            padding: 4px;
+            background: #ccc;
+            color: #000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .relation {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ccc;
+            border-right-color: transparent;
+            margin-left: 10px;
+        }
+
+        .or, .end {
+            margin-left: 10px;
+        }
+        
+        .and {
+            color: gray;
+        }
+
+        .or {
+            background: rgb(161, 161, 201);
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box and">且</div>
+        <div class="box or">或</div>
+        <div class="relation"></div>
+        <div class="box end">或1111</div>
+    </div>
+</body>
+</html>
