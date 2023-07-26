@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw triangle</title>
+    <style>
+        /* 
+            使用css绘制三角形
+            给定一个宽度和高度都为0的元素，其border的任何值都会直接相交.
+        */
+
+        /* 1. 四个三角形的形状 */
+        /* border-color: 默认是currentcolor(也就是字体颜色) */
+        /* .triangle {
+            width: 0;
+            height: 0;
+            
+            border: 100px solid;
+            border-color: orangered skyblue gold yellowgreen;
+        } */
+
+        /* 指向下面的三角形 */
+        /* .triangle {
+            width: 0;
+            height: 0;
+            border-top: 100px solid orangered;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        } */
+
+        /* 指向右的三角形 */
+        .triangle {
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-left: 100px solid yellowgreen;
+            border-bottom: 100px solid transparent;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="triangle"></div>
+</body>
+</html>
