@@ -1,0 +1,41 @@
+.typewriter-effect {
+    display: flex;
+    font-family: monospace;
+}
+
+.typewriter-effect > .text {
+    max-width: 0;
+    /* 帧数和字符数相同 */
+    animation: typing 3s steps(var(--characters)) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typewriter-effect:after {
+    content: " |";
+    /* animation: blink 0.5s infinite; */
+    animation-timing-function: step-end;
+}
+
+@keyframes typing {
+    75% {
+        max-width: calc(var(--characters) * 1ch);
+    }
+    /* 停留0.75秒 */
+    100% {
+        /* max-width: calc(var(--characters) * 1ch); */
+        max-width: calc(var(--characters) * 1ch);
+    }
+}
+
+@keyframes blink {
+    0%,
+    75%,
+    100% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+}

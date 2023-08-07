@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw segment line</title>
+    <style>
+        .reference {
+            height: 30px;
+            background-image: linear-gradient(to left, green 0%, red 100%);
+        }
+
+        .container {
+            display: flex;
+            background-image: linear-gradient(to left, green 0%, red 100%);
+        }
+
+        div.reference,
+        div.container {
+            margin-bottom: 20px;
+        }
+
+        .segment {
+            outline: 1px solid black;
+            height: 30px;
+        }
+
+        .segment.line2-1 {
+            flex-basis: 50%;
+        }
+
+        .segment.line2-2 {
+            flex-basis: 25%;
+        }
+
+        .segment.line2-3 {
+            flex-basis: 25%;
+        }
+
+        .segment.line3-1 {
+            flex-basis: 66.67%;
+        }
+
+        .segment.line3-2 {
+            flex-basis: 33.33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reference"></div>
+    <!-- 
+        line2：线段1、2、3分别占 line1 的1/2、1/4、1/4
+        line3：线段1、2分别占 line1 的2/3、1/3
+     -->
+    <div class="container">
+        <div class="segment line2-1"></div>
+        <div class="segment line2-2"></div>
+        <div class="segment line2-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="segment line3-1"></div>
+        <div class="segment line3-2"></div>
+    </div>
+</body>
+
+</html>
