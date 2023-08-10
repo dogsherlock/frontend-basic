@@ -47,7 +47,7 @@ server.on("connection", (ws) => {
         for (const [key, value] of clients.entries()) {
             if (value === ws) {
                 clients.delete(key);
-                console.log(`用户（${message.userId}）已下线`);
+                console.log(`用户（${key}）已下线`);
                 break;
             }
         }
