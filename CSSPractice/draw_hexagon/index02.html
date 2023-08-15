@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw polygon</title>
+    <style>
+        .hexagon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            /* 调整容器高度以适应你的需要 */
+        }
+
+        .hexagon {
+            position: relative;
+            width: 100px;
+            /* 调整六边形大小 */
+            height: 100px;
+            /* 计算六边形高度，可以根据需要进行调整 */
+            background-color: pink;
+            /* 顺时针画出裁剪出来展示的形状正六边形 */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        /* 
+        利用伪元素和绝对定位，来将背景变成白色.
+        */
+        .hexagon:before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 96px;
+            height: 96px;
+            background-color: #fff;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hexagon-container">
+        <div class="hexagon"></div>
+    </div>
+</body>
+
+</html>

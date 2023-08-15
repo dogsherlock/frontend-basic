@@ -61,18 +61,25 @@ nav li::after {
         translate 200ms;
 }
 
-/* A previous sibling is hovered */
+/* A previous sibling is hovered 
+优先级为: abcd->0013
+*/
 nav li:hover~li {
     --_translate: -100%;
     --_scale-dely: 200ms;
 }
 
-/* Any other sibling is hovered */
+/* Any other sibling is hovered 
+优先级为: abcd->0012
+*/
 nav:hover li {
     --_translate: 100%;
     --_scale-delay: 200ms;
 }
 
+/* 
+优先级为: abcd->0012
+ */
 nav li:hover {
     --_scale: 1;
     --_translate: 0;

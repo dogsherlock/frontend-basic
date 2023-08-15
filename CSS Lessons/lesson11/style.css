@@ -16,6 +16,32 @@ css覆盖顺序如下: 浏览器缺省值<外部样式(有href引入的单独css
 
 下面选择器类型的优先级是递增的:
 important > 内联 > ID > 类 > 标签 | 伪类 | 属性选择 > 伪对象 > 继承 > 通配符
+
+
+CSS选择器的优先级计算方法: 
+
+给css选择器分类: 
+a类: 行内样式如<div style="xxx"></div>
+b类: ID选择器
+c类: 类、属性选择器和伪类选择器
+d类: 标签选择器、伪元素
+
+**计数方法**: 
+a/b/c/d类中，出现一类，就给a/b/c/d计一个次数.
+a-d从高级到低级，a类的次数高的，其样式权重高，其余bcd类无需再比较;
+若a类的次数相同，则比较b类，b类的次数高的，其样式高权重高，其余cd类无需再比较.
+以此类推到d类.
+
+eg: 
+*{}    //a=0 b=0 c=0 d=0 最弱权重
+a:hover{}    //a=0 b=0 c=1 d=1 
+ul ol{}    //a=0 b=0 c=0 d= 2
+ul ol+li{}    //a=0 b=0 c=0 d=3 
+h1+input[type=hidden]{}    //a=0 b=0 c=1 d=3  [type=hiden]属性选择器
+ul ol li.acticce{}    //a=0 b=0 c=1 d=3 
+#ct .box p    //a=0 b=1 c=1 d=1 
+div#header::after{}    //a=0 b=1 c=0 d=2  ::after伪元素
+style=""    //a=1 b=0 c=0 d=0
 */
 
 p {
