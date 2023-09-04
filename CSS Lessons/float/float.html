@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float property</title>
+    <style>
+        * {
+            font-family: system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            color-scheme: dark;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        section {
+            box-sizing: border-box;
+            border: 1px solid blue;
+            width: 100%;
+            /* 子元素为浮动，脱离文档流，则父容器不会包裹它们.设置为浮动确保可以包含浮动子元素的高度 */
+            float: left;
+            /* overflow: hidden; */
+        }
+
+        div {
+            margin: 5px;
+            width: 50px;
+            height: 150px;
+        }
+
+        .left {
+            float: left;
+            background: pink;
+        }
+
+        .right {
+            /* clear: left; */
+            float: right;
+            background: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left">1</div>
+        <div class="left">2</div>
+        <div class="right">3</div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
+            sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
+            iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
+            aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
+            congue.
+        </p>
+    </section>
+    <script>
+        var displayProperty = getComputedStyle(document.querySelector(".left"));
+        console.log(displayProperty.display);
+    </script>
+</body>
+
+</html>
