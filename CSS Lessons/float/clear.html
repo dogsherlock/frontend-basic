@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear property</title>
+    <style>
+        * {
+            font-family: system-ui;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            color-scheme: dark;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .wrapper {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .both {
+            border: 1px solid black;
+            /* clear取值left、right、both都不相同 */
+            clear: both;
+        }
+
+        .black {
+            float: left;
+            margin: 0;
+            background-color: black;
+            color: #fff;
+            width: 20%;
+        }
+
+        .red {
+            float: right;
+            margin: 0;
+            background-color: pink;
+            width: 20%;
+        }
+
+        p {
+            background-color: lightblue;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p class="black">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+            diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+            ac dui.
+        </p>
+        <p class="red">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+            diam. Duis mattis varius dui. Suspendisse eget dolor.
+        </p>
+        <p class="both">This paragraph clears both.</p>
+    </div>
+</body>
+
+</html>
